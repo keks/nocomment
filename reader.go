@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 // nocomment provides a reader that strips away everything between a # and a newline (including the #)
 package nocomment
 
@@ -28,7 +30,9 @@ func (r *reader) Read(data []byte) (int, error) {
 }
 
 func (r *reader) rd(data []byte, n int) int {
-	if n == 0 { return 0 }
+	if n == 0 {
+		return 0
+	}
 
 	if r.inComment {
 		i := bytes.IndexByte(data[:n], '\n')
