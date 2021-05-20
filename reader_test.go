@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 package nocomment
 
 import (
@@ -47,12 +49,12 @@ func TestReader(t *testing.T) {
 			err: nil,
 		},
 		{
-			in:  `Foobar!
+			in: `Foobar!
 
 bar foo foo bar bar # (barfoo, foobar bar foo)
 bar foo bar barbar, foo bar bar foo, bar foofoofoo.
 bar foo foo bar #foobar, bar foofoo foo.`,
-			out:  `Foobar!
+			out: `Foobar!
 
 bar foo foo bar bar 
 bar foo bar barbar, foo bar bar foo, bar foofoofoo.
